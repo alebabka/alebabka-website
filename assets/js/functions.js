@@ -28,7 +28,7 @@ window.addEventListener("scroll", function(e) {
     //navStripe.classList.add("animated", "slideInLeft");
     lace.classList.add("visible");
     //lace.classList.add("animated", "slideInRight");
-    logo.src = "/jekyll-alebabka/assets/img/logo_white.png";
+    logo.src = "/assets/img/logo_white.png";
     //logoContainer.classList.add("animated", "slideInDown");
     logoContainer.classList.add("logo-small");
   } else if (navbar.classList.contains("active")) {
@@ -38,7 +38,7 @@ window.addEventListener("scroll", function(e) {
     //navStripe.classList.remove("animated", "slideInLeft");
     lace.classList.remove("visible");
     //lace.classList.remove("animated", "slideInRight");
-    logo.src = "/jekyll-alebabka/assets/img/logo_frame.png";
+    logo.src = "/assets/img/logo_frame.png";
     //logoContainer.classList.remove("animated", "slideInDown");
     logoContainer.classList.remove("logo-small");
   } else {
@@ -48,7 +48,7 @@ window.addEventListener("scroll", function(e) {
     //navStripe.classList.remove("animated", "slideInLeft");
     lace.classList.remove("visible");
     //lace.classList.remove("animated", "slideInRight");
-    logo.src = "/jekyll-alebabka/assets/img/logo_frame.png";
+    logo.src = "/assets/img/logo_frame.png";
     //logoContainer.classList.remove("animated", "slideInDown");
     logoContainer.classList.remove("logo-small");
   }
