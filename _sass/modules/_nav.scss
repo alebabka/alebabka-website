@@ -1,0 +1,279 @@
+//Navigation
+.sidebar-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: $primary-color;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    // .sidebar-exit {
+    //   // color: white;
+    //   // position: absolute;
+    //   // right: 0;
+    //   // top: 0;
+    //   // font-size: 3em;
+    //   // margin-right: 30px;
+    //   // margin-top: 30px;
+    //   // transition: all ease-in 0.3s;
+    //   // &:hover {
+    //   //   font-size: 3.2em;
+    //   //   color: darken($second-color, 25%);
+    //   // }
+    //   .btn-line {
+    //   }
+    // }
+    .sidebar-btn {
+      .btn-x {
+        width: 30px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: $second-color;
+        transition: all 0.5s ease-out;
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        // Line 2 - Hide
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        //Line 3 - Rotate
+        &:nth-child(3) {
+          transform: rotate(135deg) translate(-6px, 6px);
+        }
+      }
+    }
+    .sidebar-logo {
+      align-self: left;
+      height: 120px;
+      @media screen and (max-width: 600px) {
+        height: 120px;
+      }
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    .social-link {
+      display: flex;
+      a {
+        font-size: 1.5em;
+        color: $second-color;
+        transition: all ease-in 0.3s;
+        padding: 10px;
+        &:hover {
+          color: darken($second-color, 25%);
+        }
+      }
+    }
+    .link {
+      width: 100%;
+      font-weight: 700;
+      color: $second-color;
+      transition: all ease-in 0.3s;
+      &:hover {
+        color: darken($second-color, 25%);
+      }
+      //border-bottom: 2px solid $second-color;
+    }
+  }
+}
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+.nav-wrap {
+  transition: all 0.3s ease-in;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  #nav-content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 40px;
+    @media screen and (max-width: 600px) {
+      padding: 0 10px;
+    }
+    .nav-logo {
+      height: 120px;
+      margin-top: 5px;
+      @media screen and (max-width: 600px) {
+        height: 90px;
+      }
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    .logo-small {
+      align-self: center;
+      margin-top: 0;
+      height: 50px;
+      @media screen and (max-width: 1000px) {
+        height: 40px;
+      }
+    }
+    .responsive-menu {
+      position: relative;
+      display: none;
+      align-items: center;
+      align-self: center;
+      cursor: pointer;
+      @media screen and (max-width: 1000px) {
+        display: flex !important;
+      }
+      .text-menu {
+        margin-right: 0.3em;
+        margin-bottom: 5px;
+        color: $second-color;
+        font-size: 1.1em;
+        text-transform: uppercase;
+      }
+      .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.5s ease-out;
+        .btn-line {
+          width: 25px;
+          height: 3px;
+          margin: 0 0 5px 0;
+          background: $second-color;
+          transition: all 0.5s ease-out;
+        }
+
+        //Rotate Into X With Menu Lines
+        &.close {
+          transform: rotate(180deg);
+          .btn-line {
+            //Line 1 - Rotate
+            &:nth-child(1) {
+              transform: rotate(45deg) translate(5px, 5px);
+            }
+            // Line 2 - Hide
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            //Line 3 - Rotate
+            &:nth-child(3) {
+              transform: rotate(135deg) translate(-6px, 6px);
+            }
+          }
+        }
+      }
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      @media screen and (max-width: 1000px) {
+        display: none !important;
+      }
+      ul {
+        padding-right: 0;
+        margin-right: 0;
+      }
+      li {
+        display: block;
+        padding-right: 20px;
+        a {
+          color: $second-color;
+          transition: all 0.15s ease-in;
+          font-size: 1em;
+          font-weight: 700;
+          @media screen and (max-width: 600px) {
+            font-size: 0.7em;
+          }
+        }
+        a:hover {
+          color: darken($second-color, 25%);
+        }
+      }
+      li:last-of-type {
+        padding-right: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+.active {
+  background-color: $primary-color;
+  position: fixed;
+  height: 56px;
+  margin-top: 10px;
+  @media screen and (max-width: 1000px) {
+    height: 50px;
+  }
+  #nav-content {
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+}
+
+#nav-stripe {
+  margin-top: -10px;
+  padding: 0;
+  position: fixed;
+  height: 15px;
+  visibility: hidden;
+  background-image: radial-gradient(#fafafa 15%, transparent 10%),
+    radial-gradient(#fafafa 15%, transparent 10%);
+  background-color: #9b59b6;
+  background-position: 0 0, 10px 15px;
+  background-size: 20px 21px;
+  width: 100%;
+}
+
+.lace {
+  height: 40px;
+  //margin-bottom: 15px;
+  background-image: radial-gradient(
+    circle at 15px 0,
+    $primary-color 2px,
+    darken($primary-color, 2%) 20px,
+    rgba(255, 255, 255, 0) 21px
+  );
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: 30px 21px;
+  visibility: hidden;
+  // @media screen and (max-width: 1200px) {
+  //   display: none;
+  // }
+}

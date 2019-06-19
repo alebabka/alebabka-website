@@ -1,0 +1,184 @@
+//Header
+.header-main {
+  background: url("../img/alebabka-header.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  .home-title {
+    padding-left: 350px;
+  }
+}
+
+//Content-container
+#content {
+  padding-top: 6em;
+  padding-bottom: 3em;
+  h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    @media only screen and (max-width: 760px) {
+      font-size: 1.7em;
+    }
+  }
+  p {
+    text-align: justify;
+    letter-spacing: 0.6px;
+    line-height: 1.6em;
+    @media only screen and (max-width: 760px) {
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+  }
+  button {
+    margin-top: 30px;
+  }
+}
+.p-align-center {
+  text-align: center !important;
+}
+.about {
+  text-align: center;
+  .about-photo {
+    align-self: center;
+    max-height: 300px;
+    border-radius: 15px;
+    @media only screen and (max-width: 760px) {
+      display: none;
+    }
+  }
+  .about-photo:hover {
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+}
+.offer {
+  text-align: center;
+
+  .offer-text {
+    border-radius: 20px;
+    background: $primary-color;
+    color: $second-color;
+    padding-bottom: 30px;
+    position: relative;
+    h2 {
+      @media only screen and (max-width: 760px) {
+        margin-bottom: 20px !important;
+      }
+    }
+    img {
+      height: 150px;
+      padding: 20px;
+
+      @media only screen and (max-width: 760px) {
+        height: 80px;
+        position: absolute;
+      }
+    }
+    #cookie {
+      @media only screen and (max-width: 760px) {
+        right: 0;
+        margin-top: -10px;
+      }
+    }
+    #cake {
+      display: none;
+      @media only screen and (max-width: 760px) {
+        display: block;
+        left: 0;
+        margin-top: -10px;
+      }
+    }
+    #cake-lg {
+      display: block;
+      @media only screen and (max-width: 760px) {
+        display: none;
+      }
+    }
+  }
+  button {
+    width: 50%;
+    font-size: 30px;
+    @media only screen and (max-width: 760px) {
+      font-size: 1.2em;
+    }
+  }
+}
+.blog {
+  .blog-info {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #blog-lg {
+    display: flex;
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+  #blog-mobile {
+    display: none;
+    @media only screen and (max-width: 1200px) {
+      display: block;
+    }
+  }
+}
+.main-map {
+  @media only screen and (max-width: 760px) {
+    display: none;
+  }
+  .map {
+    border-color: $primary-color;
+    border-style: solid;
+    border-width: 3px;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+}
+.contact-row {
+  text-align: center;
+  h2 {
+    margin-bottom: 30px;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+  .row {
+    margin-bottom: 15px;
+    button {
+      border: none;
+      margin-bottom: 15px;
+    }
+    i {
+      font-size: 4em;
+      color: $primary-color;
+      padding-bottom: 10px;
+    }
+    .icon-description {
+      font-size: 13px;
+      text-align: center !important;
+      font-weight: 700 !important;
+      margin: 0;
+    }
+    .icon:hover {
+      background: $primary-color;
+      color: $second-color;
+      z-index: 2;
+      i {
+        color: $second-color;
+      }
+      border-radius: 15px;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+.divider {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  @media only screen and (max-width: 760px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}

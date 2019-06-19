@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Lato&display=swap");
+h1,
+h2,
+h3 {
+  font-family: "Berkshire Swash", cursive;
+}
+h4,
+h5 {
+  font-family: "Lato", sans-serif;
+}
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.6px;
+  line-height: 1.6em;
+  @media only screen and (max-width: 760px) {
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+}
+a {
+  font-family: "Lato", sans-serif;
+
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+$first-font: "Berkshire Swash", cursive;
+$second-font: "Lato", sans-serif;
+h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  @media only screen and (max-width: 760px) {
+    font-size: 1.7em;
+  }
+}

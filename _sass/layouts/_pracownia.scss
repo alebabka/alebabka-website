@@ -1,0 +1,47 @@
+.header-about {
+  background: url("../img/pracownia.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.about-content {
+  margin-top: 100px;
+  overflow: hidden;
+  .text {
+    text-align: center;
+    h2 {
+      padding: 20px;
+    }
+    p {
+      padding: 10px;
+    }
+    h4 {
+      padding: 20px;
+    }
+  }
+  i {
+    font-size: 5em;
+    padding: 30px;
+    color: $primary-color;
+  }
+  i:hover {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .photos {
+    img {
+      border-radius: 15px;
+      height: 200px;
+      border-width: 3px 3px 0px 3px;
+      border-style: solid;
+      border-color: $primary-color;
+    }
+    img:hover {
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+}

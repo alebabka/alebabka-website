@@ -1,0 +1,223 @@
+---
+layout: default
+---
+
+<!-- Header -->
+<header class="header-main">
+  <div class="overlay-light"></div>
+  {% include nav.html %}
+  <div class="home-title">
+    <h1 class="wow slideInRight">
+      {{ site.title }}
+    </h1>
+    <h4>
+      Słodko Się Robi
+    </h4>
+    <div class="social">
+      <a
+        href="https://www.facebook.com/alebabkapracowniacukierniczabartoszycetortyciasta/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-facebook-f"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/AleBabkaPracowniaCukiernicza/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-instagram"></i
+      ></a>
+    </div>
+  </div>
+</header>
+
+<!-- Content -->
+<div class="container" id="content">
+  <!-- This loops through the paginated posts -->
+
+  <!-- About -->
+  <div class="about">
+    <div class="row">
+      <div class="col-md-6 wow fadeIn slow">
+        <h2>
+          O Pracowni
+        </h2>
+        <p>
+          &emsp;Jesteśmy niedawno otwartą pracownią, która oferuje wszelkiego
+          rodzaju wyroby cukiernicze. Dostosowujemy się do wymagań i potrzeb
+          naszych klientów jednocześnie dbając o jakość naszych słodkości.
+        </p>
+        <p>
+          &emsp;Nasza pracownia znajduje się w województwie Warmińsko-Mazurskim,
+          okolice Bartoszyc. Jeśli masz jakieś pytania przejrzyj szczegóły
+          zawarte na naszej stronie internetowej lub skontaktuj się z nami już
+          teraz!
+        </p>
+
+        <button type="button" class="btn btn-outline-secondary">
+          <a href="pracownia.html">Dowiedz się więcej</a>
+        </button>
+      </div>
+      <div class="col-md-6">
+        <img
+          class="img-fluid about-photo wow pulse"
+          src="assets/img/about.jpg" alt="o pracowni"
+        />
+      </div>
+    </div>
+  </div>
+  <hr class="divider" />
+  <div class="offer">
+    <div class="offer-text wow slideInRight">
+      <div class="row">
+        <div class="col-md-3">
+          <img class="img-fluid" id="cookie" src="assets/img/cookie.png" alt="ikona ciasteczko"/>
+          <img class="img-fluid" id="cake" src="assets/img/cake.png"  alt="ikona tort"/>
+        </div>
+        <div class="col-md-6">
+          <h2>Oferta</h2>
+          <p class="p-align-center">
+            Zamów u nas! Jeśli interesuje Cię zamówienie tortu, ciasta, czy
+            babeczki to dobrze, że jesteś! Może szukasz słodkiego stołu? Przejdź
+            do naszej oferty i znajdź, to czego szukasz. Jeśli chcesz dowiedzieć
+            się więcej o naszej ofercie przejdź do zakładki kontakt i zadzwoń
+            lub napisz do nas.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <img class="img-fluid" id="cake-lg" src="assets/img/cake.png" alt="ikona tort" />
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-outline-secondary">
+      <a href="oferta.html">Przejdź do naszej oferty</a>
+    </button>
+  </div>
+  <hr class="divider" />
+  <div class="blog">
+    <h2>Blog</h2>
+    <div class="blog-info">
+      <h5>
+        &emsp;Zapraszam na bloga pracowni, gdzie znajdziecie różne
+        <b>promocje</b>, <b>aktualności</b> oraz <b>przepisy</b>.
+      </h5>
+    </div>
+    <div class="blogPostMoreContainer col-md-6" id="blog-lg">
+      {% for post in site.posts limit: 3 %}
+      <div class="blogPostMore">
+        <a
+          href="{{ site.baseurl }}{{ post.url }}"
+          class="blogPostFeatImg"
+          style="background-image: url('{{ site.baseurl }}{{
+            site.pathToBlogImgBin
+          }}{{ post.featImg }}');"
+        ></a>
+        <a class="blogCategory">{{ post.categories }}</a>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="blogTitle">{{
+          post.title
+        }}</a>
+        <p class="blogExcerpt">{{ post.excerpt }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="blogContainer" id="blog-mobile">
+      <div class="blog-info">
+        <p>
+          &emsp;Zapraszam na bloga pracowni, gdzie znajdziecie różne
+          <b>promocje</b>, <b>aktualności</b> oraz <b>przepisy</b>.
+        </p>
+      </div>
+      {% for post in site.posts offset: 0 limit: 1 %}
+      <div class="blogPostContainer">
+        <div class="row">
+          <div class="col-md-6 post-description">
+            <a class="blogCategory"
+              ><span>{{ post.categories }}</span></a
+            >
+            <a href="{{ site.baseurl }}{{ post.url }}" class="blogTitle">{{
+              post.title
+            }}</a>
+            <p class="blogExcerpt">{{ post.excerpt }}</p>
+            <button
+              class="btn btn-outline-secondary"
+              href="{{ site.baseurl }}{{ post.url }}"
+              type="button"
+            >
+              Przeczytaj więcej
+            </button>
+          </div>
+          <div
+            class="col-md-6 blogPostFeatImg"
+            onclick="location.href='{{ site.baseurl }}{{ post.url }}';"
+            style="background-image: url('{{ site.baseurl }}{{
+              site.pathToBlogImgBin
+            }}{{ post.featImg }}');"
+          ></div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <hr class="divider" />
+  <div class="contact">
+    <div class="row">
+      <div class="col-md-6 main-map">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2332.132648490138!2d20.812671315841175!3d54.230840980173895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e2574101382455%3A0x4b2832666d7029ce!2zUG_FgsSZY3plIDUyLCAxMS0yMDAgUG_FgsSZY3pl!5e0!3m2!1spl!2spl!4v1551804067949"
+          frameborder="2"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="col-md-6 contact-row">
+        <h2>Kontakt</h2>
+        <p>
+          &emsp;Masz pytania? Skontaktuj się z nami już dziś! Zapraszamy do
+          naszej nowo otwartej pracowni, której adres znajduje się na mapie.
+          Zapraszamy również do kontaktu poprzez media społecznościowe lub
+          kontakt telefoniczny.
+        </p>
+        <div class="row">
+          <button class="col-md-3 icon wow tada" type="button">
+            <a
+              href="https://www.facebook.com/alebabkapracowniacukierniczabartoszycetortyciasta/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-facebook"></i>
+              <p class="icon-description">Napisz do nas na Facebook'u</p>
+            </a>
+          </button>
+
+          <button class="col-md-3 icon wow tada" type="button">
+            <a
+              href="https://www.instagram.com/AleBabkaPracowniaCukiernicza/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+              <p class="icon-description">Znajdź nas na Instagramie</p>
+            </a>
+          </button>
+          <button class="col-md-3 icon wow tada" type="button">
+            <a href="mailto:kontakt@alebabka.com">
+              <i class="fas fa-envelope"></i>
+              <p class="icon-description">Skontaktuj się poprzez e-mail</p>
+            </a>
+          </button>
+          <button class="col-md-3 icon wow tada" type="button">
+            <a href="tel:+48881782016">
+              <i class="fas fa-phone"></i>
+              <p class="icon-description">Zadzwoń do nas</p>
+            </a>
+          </button>
+        </div>
+
+        <button type="button" class="btn btn-outline-secondary">
+          <a href="kontakt.html">Przejdź do danych kontaktowych</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.pagination {
+  text-align: center;
+  align-content: center;
+  display: block;
+  .btnPag {
+    background: $primary-color;
+    color: $second-color;
+    //margin: 0 10px 0 0;
+    padding: 10px;
+
+    &:hover {
+      opacity: 0.6;
+      transition: ease-in 0.3s;
+    }
+  }
+  .prev {
+    //margin: 0 10px 0 0;
+    border-radius: 15px 0 0 15px;
+  }
+  .next {
+    border-radius: 0 15px 15px 0;
+    //margin: 0 0 0 10px;
+  }
+  .page {
+    background: $fourth-color;
+    font-weight: 500;
+    padding: 10px;
+    //margin: 0px 5px;
+  }
+  .page-active {
+    background: darken($fourth-color, 10%);
+    font-weight: 700;
+    padding: 10px;
+    //margin: 0px 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

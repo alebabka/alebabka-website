@@ -1,0 +1,8 @@
+$primary-color: #9b59b6;
+$second-color: white;
+$third-color: black;
+$fourth-color: lighten($primary-color, 40%);
+
+body {
+  background: rgba($primary-color, 0.2);
+}
