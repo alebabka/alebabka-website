@@ -130,21 +130,29 @@
     }
     .nav-logo {
       height: 120px;
+      width: 120px;
       margin-top: 5px;
+      background: url("../img/logo_frame.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
       @media screen and (max-width: 600px) {
         height: 90px;
-      }
-      img {
-        height: 100%;
-        width: auto;
+        width: 90px;
       }
     }
     .logo-small {
       align-self: center;
       margin-top: 0;
+      background: url("../img/logo_white.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
       height: 50px;
+      width: 100px;
       @media screen and (max-width: 1000px) {
         height: 40px;
+        width: 80px;
       }
     }
     .responsive-menu {
