@@ -1,1 +1,3 @@
+User-agent: *
+Disallow:
 Sitemap: http://alebabka.com/sitemap.xml
