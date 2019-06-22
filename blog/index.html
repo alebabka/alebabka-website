@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /blog/
 ---
 
 {% for post in site.posts offset: 0 limit: 1 %}
@@ -22,14 +23,14 @@ layout: default
     >
     <div class="social">
       <a
-        href="https://www.facebook.com/alebabkapracowniacukierniczabartoszycetortyciasta/"
+        href="{{ site.baseurl }}{{ site.data.social.facebook }}"
         target="_blank"
         rel="noopener noreferrer"
       >
         <i class="fab fa-facebook-f"></i
       ></a>
       <a
-        href="https://www.instagram.com/AleBabkaPracowniaCukiernicza/"
+        href="{{ site.baseurl }}{{ site.data.social.instagram }}"
         target="_blank"
         rel="noopener noreferrer"
       >

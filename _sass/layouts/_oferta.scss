@@ -214,8 +214,9 @@
       }
     }
     li::before {
-      content: "•";
+      content: "-";
       color: $primary-color;
+      font-weight: 800;
     }
   }
 }

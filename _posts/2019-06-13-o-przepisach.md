@@ -2,6 +2,7 @@
 layout: post
 permalink: :categories/:title/
 title: "Słodkie przepisy AleBabki!"
+description: "Sztuczki w kuchni, tajne przepisy i o pasji cukiernictwa"
 categories: przepisy
 featImg: przepisy-2019-06-13.jpg
 author: alebabka

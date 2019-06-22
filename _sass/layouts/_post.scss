@@ -87,22 +87,24 @@
   }
 }
 
-.readMore {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: 700;
-  padding: 2em 0;
-  margin-top: 60px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  word-spacing: 10px;
-  @media screen and(max-width: 700px) {
-    font-size: 1.3em;
-    letter-spacing: 2px;
-    font-weight: 600;
-    background: $fourth-color;
-    color: $primary-color;
-    margin: 30px 0;
+h4 {
+  &.readMore {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 2em 0;
+    margin-top: 60px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    @media screen and(max-width: 700px) {
+      font-size: 1.3em;
+      letter-spacing: 2px;
+      font-weight: 600;
+      background: $fourth-color;
+      color: $primary-color;
+      margin: 30px 0;
+    }
   }
 }
 .blogPostMoreContainer {

@@ -45,11 +45,11 @@
     ul {
       font-weight: 700;
       list-style: none;
-    }
-    li::before {
-      content: "•";
-      color: $primary-color;
-      margin-right: 5px;
+      li::before {
+        content: "-";
+        color: $primary-color;
+        margin-right: 5px;
+      }
     }
   }
   .blog-owner {

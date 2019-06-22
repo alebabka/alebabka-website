@@ -15,14 +15,14 @@ layout: default
     </h4>
     <div class="social">
       <a
-        href="https://www.facebook.com/alebabkapracowniacukierniczabartoszycetortyciasta/"
+        href="{{ site.baseurl }}{{ site.data.social.facebook }}"
         target="_blank"
         rel="noopener noreferrer"
       >
         <i class="fab fa-facebook-f"></i
       ></a>
       <a
-        href="https://www.instagram.com/AleBabkaPracowniaCukiernicza/"
+        href="{{ site.baseurl }}{{ site.data.social.instagram }}"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -56,13 +56,14 @@ layout: default
         </p>
 
         <button type="button" class="btn btn-outline-secondary">
-          <a href="pracownia.html">Dowiedz się więcej</a>
+          <a href="{{ site.baseurl }}/pracownia/">Dowiedz się więcej</a>
         </button>
       </div>
       <div class="col-md-6">
         <img
           class="img-fluid about-photo wow pulse"
-          src="assets/img/about.jpg" alt="o pracowni"
+          src="assets/img/about.jpg"
+          alt="o pracowni"
         />
       </div>
     </div>
@@ -72,8 +73,18 @@ layout: default
     <div class="offer-text wow slideInRight">
       <div class="row">
         <div class="col-md-3">
-          <img class="img-fluid" id="cookie" src="assets/img/cookie.png" alt="ikona ciasteczko"/>
-          <img class="img-fluid" id="cake" src="assets/img/cake.png"  alt="ikona tort"/>
+          <img
+            class="img-fluid"
+            id="cookie"
+            src="assets/img/cookie.png"
+            alt="ikona ciasteczko"
+          />
+          <img
+            class="img-fluid"
+            id="cake"
+            src="assets/img/cake.png"
+            alt="ikona tort"
+          />
         </div>
         <div class="col-md-6">
           <h2>Oferta</h2>
@@ -86,12 +97,17 @@ layout: default
           </p>
         </div>
         <div class="col-md-3">
-          <img class="img-fluid" id="cake-lg" src="assets/img/cake.png" alt="ikona tort" />
+          <img
+            class="img-fluid"
+            id="cake-lg"
+            src="assets/img/cake.png"
+            alt="ikona tort"
+          />
         </div>
       </div>
     </div>
     <button type="button" class="btn btn-outline-secondary">
-      <a href="oferta.html">Przejdź do naszej oferty</a>
+      <a href="{{ site.baseurl }}/oferta/">Przejdź do naszej oferty</a>
     </button>
   </div>
   <hr class="divider" />
@@ -181,7 +197,7 @@ layout: default
         <div class="row">
           <button class="col-md-3 icon wow tada" type="button">
             <a
-              href="https://www.facebook.com/alebabkapracowniacukierniczabartoszycetortyciasta/"
+              href="{{ site.baseurl }}{{ site.data.social.facebook }}"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -192,7 +208,7 @@ layout: default
 
           <button class="col-md-3 icon wow tada" type="button">
             <a
-              href="https://www.instagram.com/AleBabkaPracowniaCukiernicza/"
+              href="{{ site.baseurl }}{{ site.data.social.instagram }}"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -215,7 +231,9 @@ layout: default
         </div>
 
         <button type="button" class="btn btn-outline-secondary">
-          <a href="kontakt.html">Przejdź do danych kontaktowych</a>
+          <a href="{{ site.baseurl }}/kontakt/"
+            >Przejdź do danych kontaktowych</a
+          >
         </button>
       </div>
     </div>

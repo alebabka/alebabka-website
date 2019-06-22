@@ -2,6 +2,7 @@
 layout: post
 permalink: :categories/:title/
 title: "Promocje już wkrótce"
+description: "Zapowiedź nadchodzących promocji pracowni AleBabka!"
 categories: promocje
 featImg: prom-2019-06-12.jpg
 author: alebabka
