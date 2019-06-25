@@ -8,7 +8,7 @@ layout: default
   {% include nav.html %}
   <div class="home-title">
     <h1 class="wow slideInRight">
-      {{ site.title }}
+      Pracownia Cukiernicza AleBabka!
     </h1>
     <h4>
       Słodko Się Robi
@@ -35,40 +35,6 @@ layout: default
 <!-- Content -->
 <div class="container" id="content">
   <!-- This loops through the paginated posts -->
-
-  <!-- About -->
-  <div class="about">
-    <div class="row">
-      <div class="col-md-6 wow fadeIn slow">
-        <h2>
-          O Pracowni
-        </h2>
-        <p>
-          &emsp;Jesteśmy niedawno otwartą pracownią, która oferuje wszelkiego
-          rodzaju wyroby cukiernicze. Dostosowujemy się do wymagań i potrzeb
-          naszych klientów jednocześnie dbając o jakość naszych słodkości.
-        </p>
-        <p>
-          &emsp;Nasza pracownia znajduje się w województwie Warmińsko-Mazurskim,
-          okolice Bartoszyc. Jeśli masz jakieś pytania przejrzyj szczegóły
-          zawarte na naszej stronie internetowej lub skontaktuj się z nami już
-          teraz!
-        </p>
-
-        <button type="button" class="btn btn-outline-secondary">
-          <a href="{{ site.baseurl }}/pracownia/">Dowiedz się więcej</a>
-        </button>
-      </div>
-      <div class="col-md-6">
-        <img
-          class="img-fluid about-photo wow pulse"
-          src="assets/img/about.jpg"
-          alt="o pracowni"
-        />
-      </div>
-    </div>
-  </div>
-  <hr class="divider" />
   <div class="offer">
     <div class="offer-text wow slideInRight">
       <div class="row">
@@ -106,9 +72,46 @@ layout: default
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-outline-secondary">
-      <a href="{{ site.baseurl }}/oferta/">Przejdź do naszej oferty</a>
-    </button>
+    <a href="{{ site.baseurl }}/oferta/" class="btn btn-outline-secondary"
+      >Przejdź do naszej oferty</a
+    >
+  </div>
+  <!-- About -->
+
+  <hr class="divider" />
+  <div class="about">
+    <div class="row">
+      <div class="col-md-6 wow fadeIn slow">
+        <h2>
+          O Pracowni
+        </h2>
+        <p>
+          &emsp;Jesteśmy niedawno otwartą pracownią, która oferuje wszelkiego
+          rodzaju wyroby cukiernicze. Dostosowujemy się do wymagań i potrzeb
+          naszych klientów jednocześnie dbając o jakość naszych słodkości.
+        </p>
+        <p>
+          &emsp;Nasza pracownia znajduje się w województwie Warmińsko-Mazurskim,
+          okolice Bartoszyc. Jeśli masz jakieś pytania przejrzyj szczegóły
+          zawarte na naszej stronie internetowej lub skontaktuj się z nami już
+          teraz!
+        </p>
+
+        <a
+          href="{{ site.baseurl }}/pracownia/"
+          class="btn btn-outline-secondary"
+        >
+          Dowiedz się więcej</a
+        >
+      </div>
+      <div class="col-md-6">
+        <img
+          class="img-fluid about-photo wow pulse"
+          src="assets/img/o-pracowni.jpg"
+          alt="pracownia cukiernicza robienie ciasta"
+        />
+      </div>
+    </div>
   </div>
   <hr class="divider" />
   <div class="blog">
@@ -155,13 +158,12 @@ layout: default
               post.title
             }}</a>
             <p class="blogExcerpt">{{ post.excerpt }}</p>
-            <button
+            <a
               class="btn btn-outline-secondary"
               href="{{ site.baseurl }}{{ post.url }}"
-              type="button"
             >
               Przeczytaj więcej
-            </button>
+            </a>
           </div>
           <div
             class="col-md-6 blogPostFeatImg"
@@ -195,46 +197,39 @@ layout: default
           kontakt telefoniczny.
         </p>
         <div class="row">
-          <button class="col-md-3 icon wow tada" type="button">
-            <a
-              href="{{ site.baseurl }}{{ site.data.social.facebook }}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-facebook"></i>
-              <p class="icon-description">Napisz do nas na Facebook'u</p>
-            </a>
-          </button>
+          <a
+            class="col-md-3 icon wow tada"
+            href="{{ site.baseurl }}{{ site.data.social.facebook }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-facebook"></i><br />
+            <span class="icon-description">Napisz do nas na Facebook'u</span>
+          </a>
 
-          <button class="col-md-3 icon wow tada" type="button">
-            <a
-              href="{{ site.baseurl }}{{ site.data.social.instagram }}"
-              target="_blank"
-              rel="noopener noreferrer"
+          <a
+            class="col-md-3 icon wow tada"
+            href="{{ site.baseurl }}{{ site.data.social.instagram }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-instagram"></i><br />
+            <span class="icon-description">Znajdź nas na Instagramie</span>
+          </a>
+          <a class="col-md-3 icon wow tada" href="mailto:kontakt@alebabka.com">
+            <i class="fas fa-envelope"></i><br />
+            <span class="icon-description">Skontaktuj się poprzez e-mail</span>
+          </a>
+          <a href="tel:+48881782016" class="col-md-3 icon wow tada ">
+            <i class="fas fa-phone"></i><br /><span class="icon-description"
+              >Zadzwoń do nas</span
             >
-              <i class="fab fa-instagram"></i>
-              <p class="icon-description">Znajdź nas na Instagramie</p>
-            </a>
-          </button>
-          <button class="col-md-3 icon wow tada" type="button">
-            <a href="mailto:kontakt@alebabka.com">
-              <i class="fas fa-envelope"></i>
-              <p class="icon-description">Skontaktuj się poprzez e-mail</p>
-            </a>
-          </button>
-          <button class="col-md-3 icon wow tada" type="button">
-            <a href="tel:+48881782016">
-              <i class="fas fa-phone"></i>
-              <p class="icon-description">Zadzwoń do nas</p>
-            </a>
-          </button>
+          </a>
         </div>
 
-        <button type="button" class="btn btn-outline-secondary">
-          <a href="{{ site.baseurl }}/kontakt/"
-            >Przejdź do danych kontaktowych</a
-          >
-        </button>
+        <a class="btn btn-outline-secondary" href="{{ site.baseurl }}/kontakt/"
+          >Przejdź do danych kontaktowych
+        </a>
       </div>
     </div>
   </div>

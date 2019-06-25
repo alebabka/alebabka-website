@@ -7,6 +7,11 @@
 
 <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" />
 <link
+  rel="shortcut icon"
+  href="{{ site.baseurl }}/favicon.ico"
+  type="image/x-icon"
+/>
+<link
   rel="stylesheet"
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -27,4 +32,5 @@
   href="{{ site.baseurl }}/assets/css/lightgallery.min.css"
 />
 <link rel="canonical" href="{{ page.url | prepend: site.url }}" />
-{% seo %}{% include analytics.html %}
+<title>{{ page.title | default: site.title }}</title>
+{% seo title=false %}

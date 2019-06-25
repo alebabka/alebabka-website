@@ -25,31 +25,19 @@ window.addEventListener("scroll", function(e) {
     navbar.classList.add("active");
     navbar.classList.add("animated", "slideInDown");
     navStripe.classList.add("visible");
-    //navStripe.classList.add("animated", "slideInLeft");
     lace.classList.add("visible");
-    //lace.classList.add("animated", "slideInRight");
-    //logo.src = "/assets/img/logo_white.png";
-    //logoContainer.classList.add("animated", "slideInDown");
     logoContainer.classList.add("logo-small");
   } else if (navbar.classList.contains("active")) {
     navbar.classList.remove("active");
     navbar.classList.remove("animated", "slideInDown");
     navStripe.classList.remove("visible");
-    //navStripe.classList.remove("animated", "slideInLeft");
     lace.classList.remove("visible");
-    //lace.classList.remove("animated", "slideInRight");
-    //logo.src = "/assets/img/logo_frame.png";
-    //logoContainer.classList.remove("animated", "slideInDown");
     logoContainer.classList.remove("logo-small");
   } else {
     navbar.classList.remove("active");
     navbar.classList.remove("animated", "slideInDown");
     navStripe.classList.remove("visible");
-    //navStripe.classList.remove("animated", "slideInLeft");
     lace.classList.remove("visible");
-    //lace.classList.remove("animated", "slideInRight");
-    //logo.src = "/assets/img/logo_frame.png";
-    //logoContainer.classList.remove("animated", "slideInDown");
     logoContainer.classList.remove("logo-small");
   }
 });
@@ -69,9 +57,7 @@ function toggleMenuIn() {
     menu.classList.remove("hidden");
     menu.classList.add("visible");
     menu.classList.remove("fadeOutLeft");
-    //menu.classList.remove("animated", "slideOutLeft");
     menu.classList.add("animated", "slideInLeft");
-    //navItems.forEach(item => item.classList.add("show"));
 
     //Set Menu State
     showMenu = true;
@@ -115,26 +101,7 @@ $(function() {
     return false;
   });
 });
-// const btnOffer = document.querySelector(".btn-torty");
-// const opis = document.querySelector(".opis");
 
-// btnOffer.addEventListener("click", function(e) {
-//   if (!opis.classList.contains("active")) {
-//     opis.classList.add("active", "animated", "fadeInDown");
-//     document.getElementById("rodzaje").style.border = "3px solid #9b59b6";
-//   } else if (opis.classList.contains("active")) {
-//     opis.classList.remove("active", "animated", "fadeInDown");
-//     document.getElementById("rodzaje").style.border = "0";
-//   } else {
-//     opis.classList.remove("active", "animated", "fadeInDown");
-//     document.getElementById("rodzaje").style.border = "0";
-//   }
-// });
-
-//Gallery
-// $(document).ready(function() {
-//   $("#lightGallery").lightGallery();
-// });
 $("#btn-torty").on("click", function() {
   $(this).lightGallery({
     dynamic: true,
@@ -280,4 +247,3 @@ $("#btn-ciasta").on("click", function() {
     ]
   });
 });
-//

@@ -1,6 +1,8 @@
 ---
 layout: default
 permalink: /blog/
+title: "Blog AleBabka! Promocje, Aktualności, Przepisy"
+description: "Znajdziecie tu najnowsze wpisy zawierające promocje dostępne w naszej pracowni, aktualności oraz przepisy AleBabki!"
 ---
 
 {% for post in site.posts offset: 0 limit: 1 %}
@@ -41,38 +43,55 @@ permalink: /blog/
 </header>
 {% endfor %}
 <div class="container">
-    <div class="row blog-description">
-      <div class="col-md-7 blog-about">
-          <h3>Witam słodko na moim blogu!</h3>
-          <p>Znajdziecie tu informacje o naszej pracowni, o mnie oraz przepisy na ciasta i wiele innych.
-          Blog dzieli się na trzy podstawowe kategorie: </p>
-            <ul>
-              <li>Aktualności</li>
-              <li>Promocje</li>
-              <li>Przepisy</li>
-            </ul> 
-          </p>
-          
-      </div>
-      <div class="col-md-5 blog-owner">
-          
-        <img src="{{ site.baseurl }}/assets/img/alebabka-avatar.jpg">
-        <h5>Zapraszam do czytania</h5>
-        <p>Magdalena Wiśniewska-Chołody</p>
-        
-      </div>
+  <div class="row blog-description">
+    <div class="col-md-7 blog-about">
+      <h3>Witam słodko na moim blogu!</h3>
+      <p>
+        Znajdziecie tu informacje o naszej pracowni, o mnie oraz przepisy na
+        ciasta i wiele innych. Blog dzieli się na trzy podstawowe kategorie:
+      </p>
+      <ul>
+        <li>Aktualności</li>
+        <li>Promocje</li>
+        <li>Przepisy</li>
+      </ul>
     </div>
+    <div class="col-md-5 blog-owner">
+      <img
+        src="{{ site.baseurl }}/assets/img/alebabka-avatar.jpg"
+        alt="Magdalena Wiśniewska-Chołody AleBabka"
+      />
+      <h5>Zapraszam do czytania</h5>
+      <p>Magdalena Wiśniewska-Chołody</p>
+    </div>
+  </div>
   <div class="blogContainer">
     {% for post in paginator.posts %}
     <div class="blogPostContainer">
       <div class="row">
         <div class="col-md-6 post-description">
-        <a class="blogCategory"><span>{{ post.categories }}</span></a>
-        <a href="{{ site.baseurl }}{{ post.url }}" class="blogTitle">{{ post.title }}</a>
-        <p class="blogExcerpt">{{ post.excerpt }}</p>
-        <button class="btn btn-outline-secondary"   type="button" onclick="location.href='{{ site.baseurl }}{{ post.url }}'">Przeczytaj więcej</button>
+          <a class="blogCategory"
+            ><span>{{ post.categories }}</span></a
+          >
+          <a href="{{ site.baseurl }}{{ post.url }}" class="blogTitle">{{
+            post.title
+          }}</a>
+          <p class="blogExcerpt">{{ post.excerpt }}</p>
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            onclick="location.href='{{ site.baseurl }}{{ post.url }}'"
+          >
+            Przeczytaj więcej
+          </button>
         </div>
-        <div class="col-md-6 blogPostFeatImg" onclick="location.href='{{ site.baseurl }}{{ post.url }}';" style="background-image: url('{{ site.baseurl }}{{ site.pathToBlogImgBin }}{{ post.featImg }}');"></div>
+        <div
+          class="col-md-6 blogPostFeatImg"
+          onclick="location.href='{{ site.baseurl }}{{ post.url }}';"
+          style="background-image: url('{{ site.baseurl }}{{
+            site.pathToBlogImgBin
+          }}{{ post.featImg }}');"
+        ></div>
       </div>
     </div>
     {% endfor %} {% include paginator.html %}
